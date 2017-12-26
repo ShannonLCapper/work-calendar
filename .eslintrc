@@ -1,0 +1,301 @@
+{
+    extends: [
+        "eslint:recommended",
+        "eslint-config-airbnb-base",
+        "eslint-config-airbnb-base/rules/strict",
+        "plugin:react/recommended",
+    ],
+    globals: {
+        window: false,
+    },
+    plugins: [
+        "react",
+        "import",
+    ],
+    parserOptions: {
+        ecmaVersion: 6,
+        sourceType: "module",
+        ecmaFeatures: {
+            jsx: true
+        },
+    },
+    settings: {
+        "import/resolver": {
+            node: {
+                extensions: [".js", ".json"],
+            },
+        },
+    },
+    rules: {
+        // Use Linux \n line endings
+        "linebreak-style": [
+            "error",
+            "unix",
+        ],
+
+        // require semicolons (never rely on automatic semicolon insertion)
+        "semi": [
+            "error",
+            "always",
+        ],
+
+        // require that the last line of an array or an object literal have a comma (for better diffs)
+        "comma-dangle": [
+            "error",
+            "always-multiline",
+        ],
+
+        // Don"t use the __iterator__ variable (non-standard code)
+        "no-iterator": [
+            "error",
+        ],
+
+        // Force a variable to be const if it is never re-assigned
+        "prefer-const": [
+            "error",
+        ],
+
+        // Dont modify variables decalerd as const
+        "no-const-assign": [
+            "error",
+        ],
+        // Indent rules!
+        "indent": [
+            "warn",
+            4, // 4 spaces
+            {
+                SwitchCase: 1, // but only one space inside a switch statement
+            },
+        ],
+
+        // Allow changing variables passed as part of the function signature
+        "no-param-reassign": [
+            "off",
+        ],
+
+        // Turn off max code length rules
+        "max-len": [
+            "off",
+            {
+                code: 150,
+            },
+        ],
+
+        // Don"t require inner functions to have names (allow anonymous)
+        "func-names": [
+            "off",
+        ],
+
+        // Use stroustrup style braces
+        "brace-style": [
+            "warn",
+            "stroustrup",
+        ],
+
+        // No spaces between "function" and its parens e.g. function() not function ()
+        "space-before-function-paren": [
+            "warn",
+            "never",
+        ],
+
+        // Remove unneeded spaces at the end of a line
+        "no-trailing-spaces": [
+            "warn",
+        ],
+
+        // Allow chained calls to be on the same line
+        "newline-per-chained-call": [
+            "off",
+        ],
+
+        // ParseInt shouldn"t include the radix.
+        "radix": [
+            "error",
+            "as-needed",
+        ],
+
+        // How should spaces around semicolons work?
+        "semi-spacing": [
+            "warn",
+            {
+                before: false,
+                after: true,
+            },
+        ],
+
+        // Do not allow console.log, console() messages
+        "no-console": [
+            "warn",
+        ],
+        // Use an explicit test of booleans rather than x ? true : false
+        "no-unneeded-ternary": [
+            "error",
+            {
+                defaultAssignment: true,
+            },
+        ],
+
+        // Don"t allow extra spaces where one will do
+        "no-multi-spaces": [
+            "warn",
+        ],
+        // whitespace rules around .
+        "no-whitespace-before-property": [
+            "warn",
+        ],
+
+        // Always have a space after a // starting a comment
+        "spaced-comment": [
+            "warn",
+            "always",
+        ],
+
+        // if (false) {} should trigger an error
+        "no-constant-condition": [
+            "error",
+        ],
+
+        // Using .call() or .apply() when not needed
+        "no-useless-call": [
+            "error",
+        ],
+
+        // Creating a setter but not a getter
+        "accessor-pairs": [
+            "error",
+        ],
+
+        // controls spaces around unary operators
+        "space-unary-ops": [
+            "warn",
+        ],
+
+        // Warn on TODO and FIXME comments
+        "no-warning-comments": [
+            "warn",
+        ],
+
+        // Underscores bad.
+        "camelcase": [
+            "warn",
+        ],
+
+        // spaces around properties in object literals
+        "key-spacing": [
+            "warn",
+        ],
+
+        // Spacing around commas
+        "comma-spacing": [
+            "warn",
+        ],
+
+        // Spacing around parens
+        "space-in-parens": [
+            "warn",
+        ],
+        "no-multiple-empty-lines": [
+            "warn",
+        ],
+        "space-before-blocks": [
+            "warn",
+        ],
+        "quote-props": [
+            "error",
+            "consistent-as-needed",
+        ],
+
+        // Tweak the default airbnb rules to allow ForOfStatement
+        "no-restricted-syntax": [
+            "error",
+            "ForInStatement",
+            "LabeledStatement",
+            "WithStatement",
+        ],
+
+        // no-return-assign currently broken: https://github.com/eslint/eslint/issues/5150
+        "no-return-assign": [
+            "off",
+        ],
+        "valid-jsdoc": ["warn", {
+            requireReturn: false,
+        }],
+
+        "padded-blocks": [
+            "off",
+        ],
+        "new-cap": [
+            "error", {
+                capIsNewExceptions: [
+                    "Map",
+                ],
+            },
+        ],
+        "no-unused-vars": [
+            "warn",
+        ],
+        "no-use-before-define": [
+            "error",
+            "nofunc",
+        ],
+        "quotes": [
+            "warn",
+            "backtick",
+        ],
+        "no-unreachable": [
+            "warn",
+        ],
+        "no-spaced-func": [
+            "warn",
+        ],
+        "prefer-template": [
+            "warn",
+        ],
+        "arrow-spacing": [
+            "warn",
+        ],
+        "keyword-spacing": [
+            "warn",
+        ],
+        "require-jsdoc": [
+            "off",
+        ],
+        "no-empty": [
+            "warn",
+        ],
+        "object-curly-spacing": [
+            "warn",
+        ],
+        "eol-last": [
+            "warn",
+        ],
+        "no-plusplus": [
+            "off",
+        ],
+        "no-bitwise": [
+            "off",
+        ],
+        "valid-typeof": [
+            "off",
+        ],
+        "class-methods-use-this": [
+            "off",
+        ],
+        "space-infix-ops": [
+            "warn",
+        ],
+        "jsx-quotes": [
+            "warn",
+            "prefer-single",
+        ],
+        "import/prefer-default-export": [
+            "off",
+        ],
+        "import/no-extraneous-dependencies": [
+            "off",
+        ],
+        "no-prototype-builtins": [
+            "off",
+        ],
+    },
+}
