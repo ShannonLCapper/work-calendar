@@ -11,7 +11,7 @@ const styles = StyleSheet.create({
         color: colors.defaultText,
     },
     container: {
-        maxWidth: 600,
+        maxWidth: 1000,
         minWidth: 300,
         margin: `0 auto`,
     },
@@ -30,8 +30,8 @@ const styles = StyleSheet.create({
     },
     metadata: {
         display: `flex`,
-        flexWrap: `wrap`,
         justifyContent: `space-between`,
+        padding: 20,
     },
 });
 

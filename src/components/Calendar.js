@@ -16,9 +16,6 @@ const styles = StyleSheet.create({
         width: `${(100 / 7) - 10}%`,
         fontWeight: `normal`,
     },
-    tableBody: {
-        fontSize: `.7rem`,
-    },
 });
 
 function getNumDaysInMonth(year, month) {
@@ -30,13 +27,13 @@ const dayStrings = [`Su`, `Mo`, `Tu`, `We`, `Th`, `Fr`, `Sa`];
 class Calendar extends Component {
     render() {
         return (
-            <table className={css(styles.table, this.props.textStyles)} cellPadding={10}>
+            <table className={css(styles.table, this.props.textStyles)} cellPadding={15}>
                 <thead className={css(styles.tableHead)}>
                     <tr>
                         {this.getDaysOfWeekHeader()}
                     </tr>
                 </thead>
-                <tbody className={css(styles.tableBody)}>
+                <tbody>
                     {this.getDaysOfMonth(this.props.year, this.props.month)}
                 </tbody>
             </table>

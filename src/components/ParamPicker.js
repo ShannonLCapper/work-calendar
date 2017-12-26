@@ -10,14 +10,10 @@ import './ParamPicker.css';
 const styles = StyleSheet.create({
     container: {
         color: colors.defaultText,
-        fontSize: `.7rem`,
-        paddingLeft: 10,
-        paddingRight: 10,
         textAlign: `right`,
-        alignSelf: `flex-end`,
     },
     paramPickerItem: {
-        marginBottom: 2,
+        marginBottom: 5,
     },
     input: {
         border: `none`,
@@ -28,12 +24,13 @@ const styles = StyleSheet.create({
         },
         marginLeft: 5,
         marginRight: 5,
+        fontSize: `1rem`,
     },
     numberInput: {
         width: 40,
     },
     dateInput: {
-        width: 80,
+        width: 120,
     },
 });
 

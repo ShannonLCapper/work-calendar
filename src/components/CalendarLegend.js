@@ -3,25 +3,21 @@ import { StyleSheet, css } from 'aphrodite';
 import PropTypes from 'prop-types';
 
 const styles = StyleSheet.create({
-    legend: {
-        fontSize: `.7rem`,
-        padding: 10,
-    },
     legendItem: {
         display: `flex`,
         alignItems: `center`,
         paddingRight: 10,
     },
     legendSwatch: {
-        width: 10,
-        height: 10,
+        width: 20,
+        height: 20,
         display: `inline-block`,
         margin: 5,
     },
 });
 
 const CalendarLegend = props => (
-    <div className={css(styles.legend, props.textStyle)}>
+    <div className={css(props.textStyle)}>
         <LegendItem label='Day off' swatchColor={props.offDayStyles}/>
         <LegendItem label='Work day' swatchColor={props.workDayStyles}/>
     </div>

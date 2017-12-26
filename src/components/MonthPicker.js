@@ -9,7 +9,7 @@ const styles = StyleSheet.create({
         justifyContent: `space-between`,
         backgroundColor: colors.primary,
         color: `white`,
-        height: 120,
+        height: 200,
     },
     header: {
         textAlign: `center`,
@@ -28,7 +28,8 @@ const styles = StyleSheet.create({
         backgroundColor: `transparent`,
         border: `none`,
         cursor: `pointer`,
-        padding: 20,
+        padding: 40,
+        fontSize: `2rem`,
     },
 });
 
