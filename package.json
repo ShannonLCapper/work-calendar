@@ -2,6 +2,7 @@
   "name": "ben-calendar",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://shannonlcapper.github.io/work-calendar",
   "dependencies": {
     "aphrodite": "^1.2.5",
     "moment": "^2.20.1",
