@@ -3,6 +3,8 @@ import { StyleSheet, css } from 'aphrodite';
 import PropTypes from 'prop-types';
 import colors from '../colors';
 
+const verticalCellPadding = `15px`;
+
 const styles = StyleSheet.create({
     table: {
         borderSpacing: 0,
@@ -15,6 +17,10 @@ const styles = StyleSheet.create({
     tableHeadCell: {
         width: `${(100 / 7) - 10}%`,
         fontWeight: `normal`,
+        padding: `${verticalCellPadding} 10px`,
+    },
+    tableBodyCell: {
+        padding: `${verticalCellPadding} 0`,
     },
 });
 
@@ -27,7 +33,7 @@ const dayStrings = [`Su`, `Mo`, `Tu`, `We`, `Th`, `Fr`, `Sa`];
 class Calendar extends Component {
     render() {
         return (
-            <table className={css(styles.table, this.props.textStyles)} cellPadding={15}>
+            <table className={css(styles.table, this.props.textStyles)}>
                 <thead className={css(styles.tableHead)}>
                     <tr>
                         {this.getDaysOfWeekHeader()}
@@ -71,7 +77,7 @@ class Calendar extends Component {
                 style = this.props.getStyleForDate(date);
             }
 
-            currentWeekTds.push(<td key={i} className={css(style)}>{contents}</td>);
+            currentWeekTds.push(<td key={i} className={css(styles.tableBodyCell, style)}>{contents}</td>);
 
             if ((i + 1) % 7 === 0) {
                 weekCompleted = true;
